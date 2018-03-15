@@ -1,0 +1,30 @@
+TRun/Corner:     TRun, Corner
+TRun/Union:     TRun, Corner, Union
+TRun/Bus:     TRun, Corner, Union, Bus
+TRun/Art:     TRun, Corner, Art
+TRun/York:     TRun, Corner, Union, Bus, York
+Corner/TRun:     Corner, TRun
+Corner/Union:     Corner, Union
+Corner/Bus:     Corner, Union, Bus
+Corner/Art:     Corner, Art
+Corner/York:     Corner, Union, Bus, York
+Union/TRun:     Union, Corner, TRun
+Union/Corner:     Union, Corner
+Union/Bus:     Union, Bus
+Union/Art:     Union, Corner, Art
+Union/York:     Union, Bus, York
+Bus/TRun:     Bus, Union, Corner, TRun
+Bus/Corner:     Bus, Union, Corner
+Bus/Union:     Bus, Union
+Bus/Art:     Bus, Art
+Bus/York:     Bus, York
+Art/TRun:     Art, Corner, TRun
+Art/Corner:     Art, Corner
+Art/Union:     Art, Corner, Union
+Art/Bus:     Art, Bus
+Art/York:     Art, Bus, York
+York/TRun:     York, Bus, Union, Corner, TRun
+York/Corner:     York, Bus, Union, Corner
+York/Union:     York, Bus, Union
+York/Bus:     York, Bus
+York/Art:     York, Bus, Art
