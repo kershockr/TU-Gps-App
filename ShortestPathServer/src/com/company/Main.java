@@ -14,8 +14,10 @@ public class Main
             File paths = new File(filename);
             FileWriter fw = new FileWriter(paths, true);
             FileReader fr = new FileReader(paths);
-            PrintWriter pw = new PrintWriter(fw);
+            BufferedReader bufferedReader = new BufferedReader(fr);
             paths.setWritable(true);
+
+            Scanner cin = new Scanner(System.in);
 
 
             ArrayList<Node> nodes = new ArrayList<Node>();
@@ -31,33 +33,15 @@ public class Main
             nodes.add(Bus);
             nodes.add(Art);
             nodes.add(York);
+
             ArrayList<Edge> edges = new ArrayList<Edge>();
-            Edge TC = new Edge("TC", TRun, Corner, 254.4);
-            Edge CT = new Edge("CT", Corner, TRun, 254.4);
-            Edge CU = new Edge("CU", Corner, Union, 151.8);
-            Edge UC = new Edge("UC", Union, Corner, 151.8);
-            Edge CA = new Edge("CA", Corner, Art, 71.2);
-            Edge AC = new Edge("AC", Art, Corner, 71.2);
-            Edge UB = new Edge("UB", Union, Bus, 64.4);
-            Edge BU = new Edge("BU", Bus, Union, 64.4);
-            Edge AB = new Edge("AB", Art, Bus, 160);
-            Edge BA = new Edge("BA", Bus, Art, 160);
-            Edge BY = new Edge("BY", Bus, York, 323.4);
-            Edge YB = new Edge("YB", York, Bus, 323.4);
-            edges.add(TC);
-            edges.add(CU);
-            edges.add(CA);
-            edges.add(UB);
-            edges.add(AB);
-            edges.add(BY);
-            edges.add(CT);
-            edges.add(UC);
-            edges.add(AC);
-            edges.add(BU);
-            edges.add(BA);
-            edges.add(YB);
 
-
+            addEdgeUndirected(edges, TRun, Corner, 253.4);
+            addEdgeUndirected(edges, Corner, Union, 151.8);
+            addEdgeUndirected(edges, Corner, Art, 71.2);
+            addEdgeUndirected(edges, Union, Bus, 64.4);
+            addEdgeUndirected(edges, Art, Bus, 160);
+            addEdgeUndirected(edges, Bus, York, 323.4);
 
             Graph graph = new Graph(nodes, edges);
 
@@ -74,16 +58,47 @@ public class Main
                     Node d = nodes.get(j);
                     if(d != s)
                     {
-                        String path = s.name + "/" + d.name + ":     " + graph.getPathTo(d, s);
+                        String path = s.ID + "/" + d.ID + ":     " + graph.getPathTo(d, s);
                         System.out.println("Writing path to file: " + path);
                         fw.write(path + "\n");
                     }
                 }
             }
             fw.close();
+
+            System.out.print("Enter the int of the source node and dest node (Example: 2 4): ");
+            int source = cin.nextInt();
+            int dest = cin.nextInt();
+            if((source > nodes.size() || source < 1) || (dest > nodes.size() || dest < 1)) //nodes out of range
+            {
+                System.out.println("Index or source or dest out of range. Try again");
+            }
+            else
+            {
+                System.out.println("Getting path from " + source + " to " + dest);
+                String userkey = source + "/" + dest;
+                String nextline;
+                boolean found = false;
+                while((nextline = bufferedReader.readLine()) != null && !found)
+                {
+                    int index = nextline.indexOf(userkey);
+                    if(index >= 0)
+                    {
+                        found = true;
+                        System.out.println(nextline.substring(index));
+                    }
+                }
+
+            }
         } catch (Exception e) {System.out.println(e);}
 
 
+    }
+
+    public static void addEdgeUndirected(ArrayList<Edge> list, Node source, Node dest, double weight)
+    {
+        list.add(new Edge(source, dest, weight));
+        list.add(new Edge(dest, source, weight));
     }
 }
 

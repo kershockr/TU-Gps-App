@@ -2,22 +2,20 @@ package com.company;
 
 public class Edge
 {
-    String name;
-    public Node start, end, previous; //start and end nodes of an edge, previous node in shortest path
+    public Node n1, n2; //n1 and n2 nodes of an edge, previous node in shortest path
     public double weight; //weight of this edge
 
 
     public Edge()
     {
-        start = null;
-        end = null;
+        n1 = null;
+        n2 = null;
         weight = 0;
     }
-    public Edge(String n, Node s, Node e, double w)
+    public Edge(Node s, Node e, double w)
     {
-        name = n;
-        start = s;
-        end = e;
+        n1 = s;
+        n2 = e;
         weight = w;
     }
     public void setWeight(double w)

@@ -26,27 +26,27 @@ public class Graph
 
     public void BellmanFord(Node S) //calculating shortest paths
     {
-        int start = nodes.indexOf(S);
+        int n1 = nodes.indexOf(S);
         for(int i = 0; i < nodes.size(); i++)
         {
             nodes.get(i).distance = 1000000;
         }
-        nodes.get(start).distance = 0;
-        nodes.get(start).previous = null;
+        nodes.get(n1).distance = 0;
+        nodes.get(n1).previous = null;
         for(int j = 0; j < nodes.size() - 1; j++)
         {
             for(int k = 0; k < edges.size(); k++)
             {
-                if(edges.get(k).end.distance > edges.get(k).start.distance + edges.get(k).weight)
+                if(edges.get(k).n2.distance > edges.get(k).n1.distance + edges.get(k).weight)
                 {
-                    edges.get(k).end.distance = edges.get(k).start.distance + edges.get(k).weight;
-                    edges.get(k).end.previous = edges.get(k).start;
+                    edges.get(k).n2.distance = edges.get(k).n1.distance + edges.get(k).weight;
+                    edges.get(k).n2.previous = edges.get(k).n1;
                 }
             }
         }
         for(int l = 0; l < edges.size(); l++)
         {
-            if(edges.get(l).end.distance > edges.get(l).start.distance + edges.get(l).weight)
+            if(edges.get(l).n2.distance > edges.get(l).n1.distance + edges.get(l).weight)
             {
                 System.out.println("Negative cycle in graph found");
             }
@@ -83,10 +83,10 @@ public class Graph
     public String getPathTo(Node d, Node s)
     {
         Node dest = d;
-        String path = dest.name; //create an string with the ID of the final node
+        String path = "" + dest.ID; //create an string with the ID of the final node
         while(dest.previous != null)
         {
-            path = dest.previous.name + ", " + path;
+            path = dest.previous.ID + ", " + path;
             dest = dest.previous;
         }
         return path;
