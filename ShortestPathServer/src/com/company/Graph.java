@@ -83,10 +83,10 @@ public class Graph
     public String getPathTo(Node d, Node s)
     {
         Node dest = d;
-        String path = "" + dest.ID; //create an string with the ID of the final node
+        String path = "" + dest.name; //create an string with the ID of the final node
         while(dest.previous != null)
         {
-            path = dest.previous.ID + ", " + path;
+            path = dest.previous.name + ", " + path;
             dest = dest.previous;
         }
         return path;

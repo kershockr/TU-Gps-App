@@ -1,120 +1,90 @@
-1/3:     1, 3
-1/6:     1, 3, 6
-1/4:     1, 3, 6, 4
-1/2:     1, 3, 2
-1/5:     1, 3, 6, 4, 5
-3/1:     3, 1
-3/6:     3, 6
-3/4:     3, 6, 4
-3/2:     3, 2
-3/5:     3, 6, 4, 5
-6/1:     6, 3, 1
-6/3:     6, 3
-6/4:     6, 4
-6/2:     6, 3, 2
-6/5:     6, 4, 5
-4/1:     4, 6, 3, 1
-4/3:     4, 6, 3
-4/6:     4, 6
-4/2:     4, 2
-4/5:     4, 5
-2/1:     2, 3, 1
-2/3:     2, 3
-2/6:     2, 3, 6
-2/4:     2, 4
-2/5:     2, 4, 5
-5/1:     5, 4, 6, 3, 1
-5/3:     5, 4, 6, 3
-5/6:     5, 4, 6
-5/4:     5, 4
-5/2:     5, 4, 2
-1/3:     1, 3
-1/6:     1, 3, 6
-1/4:     1, 3, 6, 4
-1/2:     1, 3, 2
-1/5:     1, 3, 6, 4, 5
-3/1:     3, 1
-3/6:     3, 6
-3/4:     3, 6, 4
-3/2:     3, 2
-3/5:     3, 6, 4, 5
-6/1:     6, 3, 1
-6/3:     6, 3
-6/4:     6, 4
-6/2:     6, 3, 2
-6/5:     6, 4, 5
-4/1:     4, 6, 3, 1
-4/3:     4, 6, 3
-4/6:     4, 6
-4/2:     4, 2
-4/5:     4, 5
-2/1:     2, 3, 1
-2/3:     2, 3
-2/6:     2, 3, 6
-2/4:     2, 4
-2/5:     2, 4, 5
-5/1:     5, 4, 6, 3, 1
-5/3:     5, 4, 6, 3
-5/6:     5, 4, 6
-5/4:     5, 4
-5/2:     5, 4, 2
-TRun/Corner:     TRun, Corner
-TRun/Union:     TRun, Corner, Union
-TRun/Bus:     TRun, Corner, Union, Bus
-TRun/Art:     TRun, Corner, Art
-TRun/York:     TRun, Corner, Union, Bus, York
-Corner/TRun:     Corner, TRun
-Corner/Union:     Corner, Union
-Corner/Bus:     Corner, Union, Bus
-Corner/Art:     Corner, Art
-Corner/York:     Corner, Union, Bus, York
-Union/TRun:     Union, Corner, TRun
-Union/Corner:     Union, Corner
-Union/Bus:     Union, Bus
-Union/Art:     Union, Corner, Art
-Union/York:     Union, Bus, York
-Bus/TRun:     Bus, Union, Corner, TRun
-Bus/Corner:     Bus, Union, Corner
-Bus/Union:     Bus, Union
-Bus/Art:     Bus, Art
-Bus/York:     Bus, York
-Art/TRun:     Art, Corner, TRun
-Art/Corner:     Art, Corner
-Art/Union:     Art, Corner, Union
-Art/Bus:     Art, Bus
-Art/York:     Art, Bus, York
-York/TRun:     York, Bus, Union, Corner, TRun
-York/Corner:     York, Bus, Union, Corner
-York/Union:     York, Bus, Union
-York/Bus:     York, Bus
-York/Art:     York, Bus, Art
-TRun/Corner:     TRun, Corner
-TRun/Union:     TRun, Corner, Union
-TRun/Bus:     TRun, Corner, Union, Bus
-TRun/Art:     TRun, Corner, Art
-TRun/York:     TRun, Corner, Union, Bus, York
-Corner/TRun:     Corner, TRun
-Corner/Union:     Corner, Union
-Corner/Bus:     Corner, Union, Bus
-Corner/Art:     Corner, Art
-Corner/York:     Corner, Union, Bus, York
-Union/TRun:     Union, Corner, TRun
-Union/Corner:     Union, Corner
-Union/Bus:     Union, Bus
-Union/Art:     Union, Corner, Art
-Union/York:     Union, Bus, York
-Bus/TRun:     Bus, Union, Corner, TRun
-Bus/Corner:     Bus, Union, Corner
-Bus/Union:     Bus, Union
-Bus/Art:     Bus, Art
-Bus/York:     Bus, York
-Art/TRun:     Art, Corner, TRun
-Art/Corner:     Art, Corner
-Art/Union:     Art, Corner, Union
-Art/Bus:     Art, Bus
-Art/York:     Art, Bus, York
-York/TRun:     York, Bus, Union, Corner, TRun
-York/Corner:     York, Bus, Union, Corner
-York/Union:     York, Bus, Union
-York/Bus:     York, Bus
-York/Art:     York, Bus, Art
+1/3: TRun, Corner
+1/6: TRun, Corner, Union
+1/4: TRun, Corner, Union, Bus
+1/2: TRun, Corner, Art
+1/5: TRun, Corner, Union, Smith, Library, York
+1/7: TRun, Corner, Union, CLA
+1/8: TRun, Corner, Union, Smith
+1/9: TRun, Corner, Union, Smith, Library
+1/10: TRun, Corner, Union, Smith, Freedom Square
+3/1: Corner, TRun
+3/6: Corner, Union
+3/4: Corner, Union, Bus
+3/2: Corner, Art
+3/5: Corner, Union, Smith, Library, York
+3/7: Corner, Union, CLA
+3/8: Corner, Union, Smith
+3/9: Corner, Union, Smith, Library
+3/10: Corner, Union, Smith, Freedom Square
+6/1: Union, Corner, TRun
+6/3: Union, Corner
+6/4: Union, Bus
+6/2: Union, Corner, Art
+6/5: Union, Smith, Library, York
+6/7: Union, CLA
+6/8: Union, Smith
+6/9: Union, Smith, Library
+6/10: Union, Smith, Freedom Square
+4/1: Bus, Union, Corner, TRun
+4/3: Bus, Union, Corner
+4/6: Bus, Union
+4/2: Bus, Art
+4/5: Bus, York
+4/7: Bus, Union, CLA
+4/8: Bus, Union, Smith
+4/9: Bus, Union, Smith, Library
+4/10: Bus, Union, Smith, Freedom Square
+2/1: Art, Corner, TRun
+2/3: Art, Corner
+2/6: Art, Corner, Union
+2/4: Art, Bus
+2/5: Art, Bus, York
+2/7: Art, Corner, Union, CLA
+2/8: Art, Corner, Union, Smith
+2/9: Art, Corner, Union, Smith, Library
+2/10: Art, Corner, Union, Smith, Freedom Square
+5/1: York, Library, Smith, Union, Corner, TRun
+5/3: York, Library, Smith, Union, Corner
+5/6: York, Library, Smith, Union
+5/4: York, Bus
+5/2: York, Bus, Art
+5/7: York, Library, Smith, CLA
+5/8: York, Library, Smith
+5/9: York, Library
+5/10: York, Library, Freedom Square
+7/1: CLA, Union, Corner, TRun
+7/3: CLA, Union, Corner
+7/6: CLA, Union
+7/4: CLA, Union, Bus
+7/2: CLA, Union, Corner, Art
+7/5: CLA, Smith, Library, York
+7/8: CLA, Smith
+7/9: CLA, Smith, Library
+7/10: CLA, Smith, Freedom Square
+8/1: Smith, Union, Corner, TRun
+8/3: Smith, Union, Corner
+8/6: Smith, Union
+8/4: Smith, Union, Bus
+8/2: Smith, Union, Corner, Art
+8/5: Smith, Library, York
+8/7: Smith, CLA
+8/9: Smith, Library
+8/10: Smith, Freedom Square
+9/1: Library, Smith, Union, Corner, TRun
+9/3: Library, Smith, Union, Corner
+9/6: Library, Smith, Union
+9/4: Library, Smith, Union, Bus
+9/2: Library, Smith, Union, Corner, Art
+9/5: Library, York
+9/7: Library, Smith, CLA
+9/8: Library, Smith
+9/10: Library, Freedom Square
+10/1: Freedom Square, Smith, Union, Corner, TRun
+10/3: Freedom Square, Smith, Union, Corner
+10/6: Freedom Square, Smith, Union
+10/4: Freedom Square, Smith, Union, Bus
+10/2: Freedom Square, Smith, Union, Corner, Art
+10/5: Freedom Square, Library, York
+10/7: Freedom Square, Smith, CLA
+10/8: Freedom Square, Smith
+10/9: Freedom Square, Library
